@@ -17,7 +17,7 @@ intellij {
     version.set("2024.3")
     type.set("PY") // PyCharm Community Edition
 
-    plugins.set(listOf("com.intellij.python"))
+    plugins.set(listOf(/* Plugin Dependencies */))
 }
 
 tasks {

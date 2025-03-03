@@ -24,15 +24,5 @@
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
-    <extensions defaultExtensionNs="com.intellij">
-        <statusBarWidgetFactory id="PyTypeWidget"
-                                implementation="com.amirali.myplugin.pytypedisplayer.PyTypeStatusBarWidgetFactory"
-                                order="first"/>
-        <!--        <projectService serviceImplementation="com.amirali.myplugin.pytypedisplayer.PyTypeResolver"/>-->
-    </extensions>
 
-    <applicationListeners>
-        <listener class="com.amirali.myplugin.pytypedisplayer.PyTypeApplicationActivationListener"
-                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>
