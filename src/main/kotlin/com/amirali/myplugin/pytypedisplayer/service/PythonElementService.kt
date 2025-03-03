@@ -7,18 +7,10 @@ import com.intellij.psi.PsiElement
 // Service interface
 interface PythonElementService {
     fun getElementAtCaret(editor: Editor, project: Project): PsiElement?
-    fun getPythonElementInfo(element: PsiElement): PyElementInfo?
     fun getVariableTypeInfo(element: PsiElement, project: Project): PyTypeInfo?
 }
 
-// Data class to hold element information
-data class PyElementInfo(
-    val elementType: String,
-    val elementClass: String,
-    val elementText: String,
-    val parentType: String? = null
-)
-
+// Data class to hold type information
 data class PyTypeInfo(
     val variableName: String,
     val typeName: String?,
