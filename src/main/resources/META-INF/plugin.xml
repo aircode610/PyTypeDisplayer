@@ -27,8 +27,8 @@
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
         <!-- Service Registration -->
-        <projectService serviceInterface="com.amirali.myplugin.pytypedisplayer.service.PythonElementServiceImpl"
-                        serviceImplementation="com.amirali.myplugin.pytypedisplayer.service.PythonElementServiceImpl"/>
+<!--        <projectService serviceInterface="com.amirali.myplugin.pytypedisplayer.service.PythonElementServiceImpl"-->
+<!--                        serviceImplementation="com.amirali.myplugin.pytypedisplayer.service.PythonElementServiceImpl"/>-->
     </extensions>
 
     <actions>
