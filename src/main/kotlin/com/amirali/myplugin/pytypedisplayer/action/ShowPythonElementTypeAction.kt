@@ -1,12 +1,14 @@
 package com.amirali.myplugin.pytypedisplayer.action
 
 import com.amirali.myplugin.pytypedisplayer.service.PythonElementServiceImpl
+import com.amirali.myplugin.pytypedisplayer.widget.PythonTypeWidget
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
-import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.StatusBar
+import com.intellij.openapi.wm.impl.status.StatusBarUtil
 import com.intellij.openapi.wm.WindowManager
+import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.Messages
 
 class ShowPythonElementTypeAction : AnAction() {
@@ -29,10 +31,7 @@ class ShowPythonElementTypeAction : AnAction() {
         val element = elementService.getElementAtCaret(editor, project) ?: return
 
         if (element == null) {
-            Messages.showInfoMessage(
-                "No Python element found at caret position.",
-                "Python Element Info"
-            )
+            updateWidgetMessage(project, "No Python element found at caret position")
             return
         }
 
@@ -41,24 +40,15 @@ class ShowPythonElementTypeAction : AnAction() {
 
         if (typeInfo != null) {
             // Display type information in a message dialog
-            val annotationInfo = if (typeInfo.isAnnotated) "Explicitly annotated" else "Inferred by PyCharm"
-
-            val message = """
-                Variable: ${typeInfo.variableName}
-                Type: ${typeInfo.typeName ?: "unknown"}
-                Source: $annotationInfo
-            """.trimIndent()
-
-            Messages.showInfoMessage(
-                message,
-                "Python Type Info"
-            )
+            updateWidgetMessage(project, "Variable: ${typeInfo.variableName}, Type: ${typeInfo.typeName ?: "unknown"}")
         } else {
             // If we couldn't get type information, say can't determine the type
-            Messages.showInfoMessage(
-                "Could not determine element information.",
-                "Python Type Info"
-            )
+            updateWidgetMessage(project, "Could not determine element information")
         }
+    }
+
+    private fun updateWidgetMessage(project: Project, message: String) {
+        // Update our status bar widget with the message
+        PythonTypeWidget.updateMessage(project, message)
     }
 }

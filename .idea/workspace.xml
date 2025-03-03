@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de4b72d9-ad41-4272-8551-45455c704c42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/action/ShowPythonElementTypeAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/action/ShowPythonElementTypeAction.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementServiceImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +54,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -81,7 +85,7 @@
     "Gradle.PyTypeDisplayer [setupDependencies].executor": "Run",
     "Gradle.Run Plugin.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "refine__service",
+    "git-widget-placeholder": "status__bar",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/Internship/Flask Support",
     "node.js.selected.package.tslint": "(autodetect)",
