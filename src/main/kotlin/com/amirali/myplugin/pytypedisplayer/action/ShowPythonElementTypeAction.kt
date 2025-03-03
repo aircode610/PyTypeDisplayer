@@ -4,7 +4,9 @@ import com.amirali.myplugin.pytypedisplayer.service.PythonElementServiceImpl
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
-import com.intellij.openapi.components.service
+import com.intellij.openapi.project.Project
+import com.intellij.openapi.wm.StatusBar
+import com.intellij.openapi.wm.WindowManager
 import com.intellij.openapi.ui.Messages
 
 class ShowPythonElementTypeAction : AnAction() {
@@ -24,7 +26,7 @@ class ShowPythonElementTypeAction : AnAction() {
         val elementService = PythonElementServiceImpl.getInstance(project)
 
         // Get the element at caret
-        val element = elementService.getElementAtCaret(editor, project)
+        val element = elementService.getElementAtCaret(editor, project) ?: return
 
         if (element == null) {
             Messages.showInfoMessage(
@@ -34,29 +36,69 @@ class ShowPythonElementTypeAction : AnAction() {
             return
         }
 
-        // Get element info
-        val elementInfo = elementService.getPythonElementInfo(element)
+        val typeInfo = elementService.getVariableTypeInfo(element, project)
 
-        if (elementInfo == null) {
+        if (typeInfo != null) {
+            // Display type information in a message dialog
+            val annotationInfo = if (typeInfo.isAnnotated) "Explicitly annotated" else "Inferred by PyCharm"
+
+            val message = """
+                Variable: ${typeInfo.variableName}
+                Type: ${typeInfo.typeName ?: "unknown"}
+                Source: $annotationInfo
+            """.trimIndent()
+
             Messages.showInfoMessage(
-                "Could not determine Python element type.",
-                "Python Element Info"
+                message,
+                "Python Type Info"
             )
-            return
+        } else {
+            // If we couldn't get type information, show basic element info as a fallback
+            val elementInfo = elementService.getPythonElementInfo(element)
+
+            if (elementInfo != null) {
+                val message = """
+                    Could not determine variable type.
+                    Element Type: ${elementInfo.elementType}
+                    Element Class: ${elementInfo.elementClass}
+                    Text: "${elementInfo.elementText}"
+                """.trimIndent()
+
+                Messages.showInfoMessage(
+                    message,
+                    "Python Type Info"
+                )
+            } else {
+                Messages.showInfoMessage(
+                    "Could not determine element information.",
+                    "Python Type Info"
+                )
+            }
         }
 
-        // Display the information
-        val message = """
-            Element Type: ${elementInfo.elementType}
-            Element Class: ${elementInfo.elementClass}
-            Text: "${elementInfo.elementText}"
-            
-            Parent Element: ${elementInfo.parentType ?: "None"}
-        """.trimIndent()
+        // Get element info
+//        val elementInfo = elementService.getPythonElementInfo(element)
+//
+//        if (elementInfo == null) {
+//            Messages.showInfoMessage(
+//                "Could not determine Python element type.",
+//                "Python Element Info"
+//            )
+//            return
+//        }
 
-        Messages.showInfoMessage(
-            message,
-            "Python Element Info"
-        )
+        // Display the information
+//        val message = """
+//            Element Type: ${elementInfo.elementType}
+//            Element Class: ${elementInfo.elementClass}
+//            Text: "${elementInfo.elementText}"
+//
+//            Parent Element: ${elementInfo.parentType ?: "None"}
+//        """.trimIndent()
+//
+//        Messages.showInfoMessage(
+//            message,
+//            "Python Element Info"
+//        )
     }
 }
