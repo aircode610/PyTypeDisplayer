@@ -1,5 +1,7 @@
 package com.amirali.myplugin.pytypedisplayer.service
 
+import com.intellij.openapi.components.Service
+import com.intellij.openapi.components.Service.Level
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiDocumentManager
@@ -7,6 +9,7 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.util.PsiTreeUtil
 import com.jetbrains.python.psi.*
 
+@Service(Level.PROJECT)
 class PythonElementServiceImpl : PythonElementService {
 
     override fun getElementAtCaret(editor: Editor, project: Project): PsiElement? {
@@ -51,5 +54,12 @@ class PythonElementServiceImpl : PythonElementService {
             PyImportStatement::class.java,
             PyImportElement::class.java
         )
+    }
+
+    companion object {
+        // Convenience method for getting the service
+        fun getInstance(project: Project): PythonElementService {
+            return project.getService(PythonElementServiceImpl::class.java)
+        }
     }
 }
