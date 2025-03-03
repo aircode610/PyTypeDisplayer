@@ -26,9 +26,15 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
+
+        <!-- Project Startup -->
+        <postStartupActivity
+                implementation="com.amirali.myplugin.pytypedisplayer.listener.PythonCaretListenerStarter"/>
+
         <!-- Status Bar Widget Registration -->
         <statusBarWidgetFactory
                 implementation="com.amirali.myplugin.pytypedisplayer.widget.PythonTypeWidgetFactory"/>
+
     </extensions>
 
     <actions>
