@@ -14,6 +14,5 @@ interface PythonElementService {
 data class PyTypeInfo(
     val variableName: String,
     val typeName: String?,
-    val isInferred: Boolean = true,
-    val isAnnotated: Boolean = false
+    // More information can be added (TODO: can be implemented for other versions)
 )

@@ -1,6 +1,8 @@
 package com.amirali.myplugin.pytypedisplayer.service
 
+// Local
 import com.amirali.myplugin.pytypedisplayer.widget.PythonTypeWidget
+
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.components.Service.Level
 import com.intellij.openapi.project.Project
@@ -13,4 +15,5 @@ class PythonTypeWidgetUpdater(private val project: Project) {
         val statusBar = WindowManager.getInstance().getStatusBar(project) ?: return
         statusBar.updateWidget(PythonTypeWidget.ID)
     }
+
 }

@@ -6,8 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="de4b72d9-ad41-4272-8551-45455c704c42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/action/ShowPythonElementTypeAction.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/listener/PythonCaretListenerStarter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/listener/PythonCaretListenerStarter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonCaretListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonCaretListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementServiceImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonTypeWidgetUpdater.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonTypeWidgetUpdater.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/widget/PythonTypeWidget.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/widget/PythonTypeWidget.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/widget/PythonTypeWidgetFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/widget/PythonTypeWidgetFactory.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,24 +65,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "aircode610"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;aircode610&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:aircode610/PyTypeDisplayer.git",
-    "accountId": "310dcfc9-9ed8-4b32-8367-a6ab479a9b02"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:aircode610/PyTypeDisplayer.git&quot;,
+    &quot;accountId&quot;: &quot;310dcfc9-9ed8-4b32-8367-a6ab479a9b02&quot;
   }
-}]]></component>
+}</component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -95,11 +102,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.PyTypeDisplayer [build].executor": "Run",
     "Gradle.PyTypeDisplayer [setupDependencies].executor": "Run",
     "Gradle.Run Plugin.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "listener",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/Internship/Flask Support",
     "node.js.detected.package.eslint": "true",
@@ -113,6 +121,35 @@
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
       <recent name="com.amirali.myplugin.pytypedisplayer.listener" />
     </key>
+  </component>
+  <component name="RunManager" selected="Gradle.Run Plugin">
+    <configuration name="PyTypeDisplayer [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.PyTypeDisplayer [build]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

@@ -1,6 +1,8 @@
 package com.amirali.myplugin.pytypedisplayer.service
 
+// Local
 import com.amirali.myplugin.pytypedisplayer.widget.PythonTypeWidget
+
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.components.Service.Level
 import com.intellij.openapi.editor.Editor
@@ -62,7 +64,7 @@ class PythonCaretListener(private val project: Project) : CaretListener {
         val psiFile = PsiDocumentManager.getInstance(project).getPsiFile(editor.document)
 
         if (psiFile !is PyFile) {
-            // Not a Python file, clear the widget
+            // If not a Python file, clear the widget
             PythonTypeWidget.updateMessage(project, "")
             return
         }
@@ -81,12 +83,12 @@ class PythonCaretListener(private val project: Project) : CaretListener {
         }
     }
 
-    // Additional CaretListener methods we need to implement
     override fun caretAdded(event: CaretEvent) {
-        // Not needed, but required by the interface
+        // Not needed, but required by the interface (TODO: can be implemented for other versions)
     }
 
     override fun caretRemoved(event: CaretEvent) {
-        // Not needed, but required by the interface
+        // Not needed, but required by the interface (TODO: can be implemented for other versions)
     }
+
 }

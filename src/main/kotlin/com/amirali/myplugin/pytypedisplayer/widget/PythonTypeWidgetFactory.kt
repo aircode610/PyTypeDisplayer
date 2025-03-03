@@ -22,4 +22,5 @@ class PythonTypeWidgetFactory : StatusBarWidgetFactory {
     }
 
     override fun canBeEnabledOn(statusBar: StatusBar): Boolean = true
+
 }

@@ -76,14 +76,9 @@ class PythonElementServiceImpl : PythonElementService {
         // Get the inferred type
         val pyType = typeEvalContext.getType(reference)
 
-        // Check if the type has an annotation
-//        val hasAnnotation = reference.hasTypeAnnotation()
-
         return PyTypeInfo(
             variableName = variableName,
             typeName = formatPyType(pyType),
-            isInferred = true,
-            isAnnotated = false
         )
     }
 
@@ -96,14 +91,9 @@ class PythonElementServiceImpl : PythonElementService {
         // Get the inferred type
         val pyType = typeEvalContext.getType(target)
 
-        // Check if the type has an annotation
-//        val hasAnnotation = target.hasTypeAnnotation()
-
         return PyTypeInfo(
             variableName = variableName,
             typeName = formatPyType(pyType),
-            isInferred = true,
-            isAnnotated = false
         )
     }
 
@@ -127,4 +117,5 @@ class PythonElementServiceImpl : PythonElementService {
             return project.getService(PythonElementServiceImpl::class.java)
         }
     }
+
 }

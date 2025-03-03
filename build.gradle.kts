@@ -15,9 +15,10 @@ repositories {
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
     version.set("2024.3")
-    type.set("PY") // PyCharm Community Edition
+    type.set("PY") // PyCharm Professional
 
     plugins.set(listOf("Pythonid"))
+
     downloadSources.set(false)
 }
 
@@ -45,4 +46,5 @@ tasks {
     publishPlugin {
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
+
 }

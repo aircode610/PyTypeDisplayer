@@ -1,5 +1,6 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
+
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
     <id>com.amirali.myplugin.PyTypeDisplayer</id>
 
@@ -8,31 +9,30 @@
     <name>PyTypeDisplayer</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+    <vendor email="aircode610@gmail.com" url="https://github.com/aircode610/">Amirali Iranmanesh</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-    <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
-  ]]></description>
+    <description>A PyCharm plugin that displays the type of a variable under the caret in the status bar.</description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.pycharm</depends>
     <depends>com.intellij.modules.python</depends>
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
 
-        <!-- Project Startup -->
+        <!-- Project Startup Listener -->
         <postStartupActivity
                 implementation="com.amirali.myplugin.pytypedisplayer.listener.PythonCaretListenerStarter"/>
 
         <!-- Status Bar Widget Registration -->
         <statusBarWidgetFactory
+                id="PythonTypeWidget"
                 implementation="com.amirali.myplugin.pytypedisplayer.widget.PythonTypeWidgetFactory"/>
 
     </extensions>

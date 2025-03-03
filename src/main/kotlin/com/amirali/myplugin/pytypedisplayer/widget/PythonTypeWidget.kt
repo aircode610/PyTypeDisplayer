@@ -1,6 +1,8 @@
 package com.amirali.myplugin.pytypedisplayer.widget
 
+// Local
 import com.amirali.myplugin.pytypedisplayer.service.PythonTypeWidgetUpdater
+
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.StatusBar
 import com.intellij.openapi.wm.StatusBarWidget
@@ -27,11 +29,11 @@ class PythonTypeWidget(private val project: Project) : StatusBarWidget, StatusBa
     override fun getPresentation(): StatusBarWidget.WidgetPresentation = this
 
     override fun install(statusBar: StatusBar) {
-        // Widget is being installed to the status bar
+        // Widget is being installed to the status bar (TODO: can be implemented for other versions)
     }
 
     override fun dispose() {
-        // Clean up resources if needed
+        // Clean up resources if needed (TODO: can be implemented for other versions)
     }
 
     // TextPresentation methods
@@ -42,4 +44,5 @@ class PythonTypeWidget(private val project: Project) : StatusBarWidget, StatusBa
     override fun getAlignment(): Float = Component.LEFT_ALIGNMENT
 
     override fun getClickConsumer(): Consumer<MouseEvent>? = null
+
 }
