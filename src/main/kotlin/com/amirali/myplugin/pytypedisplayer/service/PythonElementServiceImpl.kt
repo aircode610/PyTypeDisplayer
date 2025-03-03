@@ -25,26 +25,6 @@ class PythonElementServiceImpl : PythonElementService {
         return psiFile.findElementAt(caretOffset)
     }
 
-    override fun getPythonElementInfo(element: PsiElement): PyElementInfo? {
-        // Basic element info
-        val elementType = element.node.elementType.toString()
-        val elementClass = element.javaClass.simpleName
-        val elementText = element.text.let {
-            if (it.length > 50) it.substring(0, 50) + "..." else it
-        }
-
-        // Find meaningful parent element
-        val meaningfulParent = findMeaningfulParent(element)
-        val parentType = meaningfulParent?.javaClass?.simpleName
-
-        return PyElementInfo(
-            elementType = elementType,
-            elementClass = elementClass,
-            elementText = elementText,
-            parentType = parentType
-        )
-    }
-
     override fun getVariableTypeInfo(element: PsiElement, project: Project): PyTypeInfo? {
         // Start with the element at caret
         var currentElement = element
@@ -139,19 +119,6 @@ class PythonElementServiceImpl : PythonElementService {
                 name
             }
         } ?: "unknown"
-    }
-
-    // Helper method to find a more meaningful parent element
-    private fun findMeaningfulParent(element: PsiElement): PyElement? {
-        return PsiTreeUtil.getParentOfType(
-            element,
-            PyFunction::class.java,
-            PyClass::class.java,
-            PyStatement::class.java,
-            PyExpression::class.java,
-            PyImportStatement::class.java,
-            PyImportElement::class.java
-        )
     }
 
     companion object {
