@@ -36,6 +36,7 @@ class ShowPythonElementTypeAction : AnAction() {
             return
         }
 
+        // Get the element type
         val typeInfo = elementService.getVariableTypeInfo(element, project)
 
         if (typeInfo != null) {
@@ -53,52 +54,11 @@ class ShowPythonElementTypeAction : AnAction() {
                 "Python Type Info"
             )
         } else {
-            // If we couldn't get type information, show basic element info as a fallback
-            val elementInfo = elementService.getPythonElementInfo(element)
-
-            if (elementInfo != null) {
-                val message = """
-                    Could not determine variable type.
-                    Element Type: ${elementInfo.elementType}
-                    Element Class: ${elementInfo.elementClass}
-                    Text: "${elementInfo.elementText}"
-                """.trimIndent()
-
-                Messages.showInfoMessage(
-                    message,
-                    "Python Type Info"
-                )
-            } else {
-                Messages.showInfoMessage(
-                    "Could not determine element information.",
-                    "Python Type Info"
-                )
-            }
+            // If we couldn't get type information, say can't determine the type
+            Messages.showInfoMessage(
+                "Could not determine element information.",
+                "Python Type Info"
+            )
         }
-
-        // Get element info
-//        val elementInfo = elementService.getPythonElementInfo(element)
-//
-//        if (elementInfo == null) {
-//            Messages.showInfoMessage(
-//                "Could not determine Python element type.",
-//                "Python Element Info"
-//            )
-//            return
-//        }
-
-        // Display the information
-//        val message = """
-//            Element Type: ${elementInfo.elementType}
-//            Element Class: ${elementInfo.elementClass}
-//            Text: "${elementInfo.elementText}"
-//
-//            Parent Element: ${elementInfo.parentType ?: "None"}
-//        """.trimIndent()
-//
-//        Messages.showInfoMessage(
-//            message,
-//            "Python Element Info"
-//        )
     }
 }
