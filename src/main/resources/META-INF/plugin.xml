@@ -37,15 +37,4 @@
 
     </extensions>
 
-    <actions>
-        <!-- Action Registration -->
-        <action id="com.amirali.myplugin.ShowPythonElementTypeAction"
-                class="com.amirali.myplugin.pytypedisplayer.action.ShowPythonElementTypeAction"
-                text="Show Python Element Type"
-                description="Shows the type of Python PSI element at current caret position">
-            <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="alt shift E"/>
-        </action>
-    </actions>
-
 </idea-plugin>
