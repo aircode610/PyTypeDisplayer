@@ -32,6 +32,9 @@ users: list
 coordinates: 
 tuple person: dict
 ```
+
+<img src="assets/demo.gif"  alt="Here is the example"/>
+
 ## Usage
 
 After installation:
