@@ -6,15 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de4b72d9-ad41-4272-8551-45455c704c42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/listener/PythonCaretListenerStarter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/listener/PythonCaretListenerStarter.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonCaretListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonCaretListener.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonElementServiceImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonTypeWidgetUpdater.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/service/PythonTypeWidgetUpdater.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/widget/PythonTypeWidget.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/widget/PythonTypeWidget.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/widget/PythonTypeWidgetFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/widget/PythonTypeWidgetFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

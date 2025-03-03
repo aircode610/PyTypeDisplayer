@@ -76,7 +76,7 @@ class PythonCaretListener(private val project: Project) : CaretListener {
         val typeInfo = elementService.getVariableTypeInfo(element, project)
 
         if (typeInfo != null) {
-            PythonTypeWidget.updateMessage(project, "Variable: ${typeInfo.variableName}, Type: ${typeInfo.typeName ?: "unknown"}")
+            PythonTypeWidget.updateMessage(project, "${typeInfo.variableName}: ${typeInfo.typeName ?: "unknown"}")
         } else {
             // Clear the widget when not on a variable
             PythonTypeWidget.updateMessage(project, "")
