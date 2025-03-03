@@ -4,7 +4,6 @@ import com.amirali.myplugin.pytypedisplayer.service.PythonTypeWidgetUpdater
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.StatusBar
 import com.intellij.openapi.wm.StatusBarWidget
-import com.intellij.openapi.wm.StatusBarWidgetFactory
 import com.intellij.util.Consumer
 import java.awt.Component
 import java.awt.event.MouseEvent

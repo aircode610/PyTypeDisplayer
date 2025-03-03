@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de4b72d9-ad41-4272-8551-45455c704c42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/action/ShowPythonElementTypeAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/action/ShowPythonElementTypeAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/action/ShowPythonElementTypeAction.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/widget/PythonTypeWidget.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/amirali/myplugin/pytypedisplayer/widget/PythonTypeWidget.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +65,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "aircode610"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:aircode610/PyTypeDisplayer.git",
+    "accountId": "310dcfc9-9ed8-4b32-8367-a6ab479a9b02"
+  }
+}]]></component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -85,14 +98,22 @@
     "Gradle.PyTypeDisplayer [setupDependencies].executor": "Run",
     "Gradle.Run Plugin.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "status__bar",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "listener",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/Internship/Flask Support",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.amirali.myplugin.pytypedisplayer.listener" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -110,6 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741006541568</updated>
       <workItem from="1741006542758" duration="199000" />
+      <workItem from="1741026347490" duration="1569000" />
     </task>
     <servers />
   </component>

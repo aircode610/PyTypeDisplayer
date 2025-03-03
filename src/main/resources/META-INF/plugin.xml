@@ -26,20 +26,15 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
+
+        <!-- Project Startup -->
+        <postStartupActivity
+                implementation="com.amirali.myplugin.pytypedisplayer.listener.PythonCaretListenerStarter"/>
+
         <!-- Status Bar Widget Registration -->
         <statusBarWidgetFactory
                 implementation="com.amirali.myplugin.pytypedisplayer.widget.PythonTypeWidgetFactory"/>
-    </extensions>
 
-    <actions>
-        <!-- Action Registration -->
-        <action id="com.amirali.myplugin.ShowPythonElementTypeAction"
-                class="com.amirali.myplugin.pytypedisplayer.action.ShowPythonElementTypeAction"
-                text="Show Python Element Type"
-                description="Shows the type of Python PSI element at current caret position">
-            <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <keyboard-shortcut keymap="$default" first-keystroke="alt shift E"/>
-        </action>
-    </actions>
+    </extensions>
 
 </idea-plugin>
