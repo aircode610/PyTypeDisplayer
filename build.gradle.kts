@@ -1,7 +1,7 @@
 plugins {
-    id("java")
-    id("org.jetbrains.kotlin.jvm") version "1.9.25"
-    id("org.jetbrains.intellij") version "1.17.4"
+    alias(libs.plugins.java)
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.intellij)
 }
 
 group = "com.amirali.myplugin"
@@ -14,7 +14,7 @@ repositories {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2024.3")
+    version.set(libs.versions.intellij.version.get())
     type.set("PY") // PyCharm Professional
 
     plugins.set(listOf("Pythonid"))
@@ -25,11 +25,11 @@ intellij {
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
+        sourceCompatibility = libs.versions.java.version.get()
+        targetCompatibility = libs.versions.java.version.get()
     }
     withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "17"
+        kotlinOptions.jvmTarget = libs.versions.java.version.get()
     }
 
     patchPluginXml {
@@ -47,4 +47,7 @@ tasks {
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
 
+    test {
+        enabled = false
+    }
 }

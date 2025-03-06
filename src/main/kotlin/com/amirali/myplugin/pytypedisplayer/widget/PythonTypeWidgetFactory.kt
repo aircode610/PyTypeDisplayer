@@ -13,9 +13,7 @@ class PythonTypeWidgetFactory : StatusBarWidgetFactory {
 
     override fun isAvailable(project: Project): Boolean = true
 
-    override fun createWidget(project: Project): StatusBarWidget {
-        return PythonTypeWidget(project)
-    }
+    override fun createWidget(project: Project): StatusBarWidget = PythonTypeWidget(project)
 
     override fun disposeWidget(widget: StatusBarWidget) {
         widget.dispose()
