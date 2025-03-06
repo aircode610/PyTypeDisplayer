@@ -1,0 +1,15 @@
+[versions]
+# Kotlin and Gradle plugins
+kotlin = "1.9.25"
+intellij-gradle-plugin = "1.17.4"
+
+# IntelliJ/PyCharm settings
+intellij-version = "2024.3"
+
+# Java compatibility
+java-version = "17"
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+intellij = { id = "org.jetbrains.intellij", version.ref = "intellij-gradle-plugin" }
+java = { id = "java" }
